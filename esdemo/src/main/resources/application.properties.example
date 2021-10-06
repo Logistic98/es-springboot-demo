@@ -1,0 +1,5 @@
+## elasticsearch配置
+elasticsearch.host=127.0.0.1
+elasticsearch.port=9200
+elasticsearch.username=username
+elasticsearch.password=password

@@ -1,0 +1,509 @@
+{
+	"info": {
+		"_postman_id": "1713d52e-8488-46ad-93a9-cdae2552a79c",
+		"name": "ES-Springboot整合增删查改示例",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "创建索引",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/index/createIndex?index=user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"index",
+						"createIndex"
+					],
+					"query": [
+						{
+							"key": "index",
+							"value": "user"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询索引",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/index/queryIndex?index=user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"index",
+						"queryIndex"
+					],
+					"query": [
+						{
+							"key": "index",
+							"value": "user"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "删除索引",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/index/deleteIndex?index=user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"index",
+						"deleteIndex"
+					],
+					"query": [
+						{
+							"key": "index",
+							"value": "user"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增文档",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 111111,\r\n    \"name\": \"zhangsan\",\r\n    \"sex\": \"男\",\r\n    \"age\": \"22\",\r\n    \"city\": \"beijing\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/document/createDocument",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"document",
+						"createDocument"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询文档",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/document/queryDocument?id=111111",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"document",
+						"queryDocument"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "111111"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "修改文档",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 111111,\r\n    \"name\": \"zhangsan\",\r\n    \"sex\": \"男\",\r\n    \"age\": \"44\",\r\n    \"city\": \"shanghai\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/document/updateDocument",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"document",
+						"updateDocument"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "删除文档",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/document/deleteDocument?id=111111",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"document",
+						"deleteDocument"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "111111"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "批量新增文档",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n    \"id\": 777777,\r\n    \"name\": \"zhangsan\",\r\n    \"sex\": \"男\",\r\n    \"age\": \"22\",\r\n    \"city\": \"dalian\"\r\n},\r\n{\r\n    \"id\": 666666,\r\n    \"name\": \"lisi\",\r\n    \"sex\": \"女\",\r\n    \"age\": \"33\",\r\n    \"city\": \"shanghai\"\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/document/bulkCreateDocument",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"document",
+						"bulkCreateDocument"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "批量删除文档",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n    \"id\": 777777\r\n},\r\n{\r\n    \"id\": 888888\r\n}\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/document/bulkDeleteDocument",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"document",
+						"bulkDeleteDocument"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "全量查询文档",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/document/queryAllDocument",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"document",
+						"queryAllDocument"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询结果过滤",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/document/queryFilterDocument",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"document",
+						"queryFilterDocument"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "分页查询文档",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/document/queryPageDocument?from=2&size=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"document",
+						"queryPageDocument"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "2"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "单条件查询文档",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/document/querySingleConditionDocument?name=zhangsan",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"document",
+						"querySingleConditionDocument"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "zhangsan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "组合条件查询文档",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/document/queryCombinationConditionDocument?name=zhangsan&city=beijing",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"document",
+						"queryCombinationConditionDocument"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "zhangsan"
+						},
+						{
+							"key": "city",
+							"value": "beijing"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "范围查询文档",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/document/queryRangeDocument?minAge=22&maxAge=33",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"document",
+						"queryRangeDocument"
+					],
+					"query": [
+						{
+							"key": "minAge",
+							"value": "22"
+						},
+						{
+							"key": "maxAge",
+							"value": "33"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "模糊查询文档",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/document/queryFuzzyDocument?name=zhangsa",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"document",
+						"queryFuzzyDocument"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "zhangsa"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "聚合查询文档",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/document/queryAggregateDocument",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"document",
+						"queryAggregateDocument"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
