@@ -2,7 +2,7 @@
 
 Elasticsearch与Springboot整合及基本增删查改操作示例。
 
-详见：[Elasticsearch整合及基本操作示例](https://www.eula.club/Elasticsearch%E6%95%B4%E5%90%88%E5%8F%8A%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E7%A4%BA%E4%BE%8B.html)
+详见：[Elasticsearch整合及基本操作示例](https://www.eula.club/blogs/Elasticsearch%E6%95%B4%E5%90%88%E5%8F%8A%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E7%A4%BA%E4%BE%8B.html)
 
 文档说明：
 
